@@ -6,22 +6,20 @@ import { useEffect } from 'react'
 export default function ThemeToggle({ darkMode, setDarkMode }) {
   // Apply dark mode class to HTML document and set up transition
   useEffect(() => {
-    const root = document.documentElement;
-    root.classList.add('transition-colors');
-    root.classList.add('duration-300');
-    
-    if (darkMode) {
-      root.classList.add('dark');
-    } else {
-      root.classList.remove('dark');
+    const savedMode = localStorage.getItem('darkMode');
+    if (savedMode !== null) {
+      setDarkMode(savedMode === 'true');
     }
+  }, [setDarkMode]);
 
-    // Store preference in localStorage
-    localStorage.setItem('darkMode', darkMode);
-
-    return () => {
-      root.classList.remove('transition-colors');
-      root.classList.remove('duration-300');
+  useEffect(() => {
+    // Apply the dark mode class to the HTML element
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('darkMode', 'true');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('darkMode', 'false');
     }
   }, [darkMode]);
 

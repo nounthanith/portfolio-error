@@ -18,6 +18,7 @@ export default function Header({ darkMode, setDarkMode }) {
   }, []);
 
   const navItems = [
+    
     { name: "Home", to: "home" },
     { name: "About", to: "about" },
     { name: "Projects", to: "projects" },
@@ -44,7 +45,7 @@ export default function Header({ darkMode, setDarkMode }) {
             duration={500}
             className="text-2xl font-bold bg-gradient-to-r from-rose-500 to-purple-500 bg-clip-text text-transparent cursor-pointer"
           >
-            Nith
+            ThaNith
           </Link>
 
           {/* Desktop Navigation */}
@@ -73,12 +74,12 @@ export default function Header({ darkMode, setDarkMode }) {
 
           {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center space-x-4">
-            <button
+            {/* <button
               onClick={() => setDarkMode(!darkMode)}
               className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
             >
               {darkMode ? <FiSun /> : <FiMoon />}
-            </button>
+            </button> */}
 
             <button
               onClick={() => setIsOpen(!isOpen)}

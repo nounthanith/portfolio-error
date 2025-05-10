@@ -1,8 +1,35 @@
+/* App.css */
+
+
+/* Custom base styles */
+:root {
+  --color-text-base: #213547;
+  --color-text-muted: #444;
+  --color-text-inverted: #ffffff;
+  --color-bg: #ffffff;
+  --color-bg-muted: #f9f9f9;
+  --color-accent: #646cff;
+  --color-accent-hover: #535bf2;
+}
+
+.dark {
+  --color-text-base: rgba(255, 255, 255, 0.87);
+  --color-text-muted: #aaa;
+  --color-text-inverted: #213547;
+  --color-bg: #242424;
+  --color-bg-muted: #1a1a1a;
+  --color-accent: #61dafb;
+  --color-accent-hover: #4fc1e9;
+}
+
+/* Your existing styles with dark mode support */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: var(--color-bg);
+  color: var(--color-text-base);
 }
 
 .logo {
@@ -12,7 +39,7 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em var(--color-accent));
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
@@ -35,8 +62,23 @@
 
 .card {
   padding: 2em;
+  background-color: var(--color-bg-muted);
 }
 
 .read-the-docs {
-  color: #888;
+  color: var(--color-text-muted);
+}
+
+/* Additional dark mode transitions */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Link styles */
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-accent-hover);
 }

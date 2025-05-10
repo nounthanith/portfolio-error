@@ -1,12 +1,24 @@
 // components/Hero.jsx
 import { motion } from "framer-motion";
-import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import {
+  FiFacebook,
+  FiFileText,
+  FiGithub,
+  FiInstagram,
+  FiLinkedin,
+  FiPhone,
+  FiPhoneCall,
+  FiTwitter,
+} from "react-icons/fi";
 import { Link } from "react-scroll";
 import me from "./../assets/Me.jpg";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="home"
+      className="relative h-screen flex items-center justify-center overflow-hidden"
+    >
       <div className="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center">
         <div className="md:w-1/2">
           <motion.h1
@@ -24,7 +36,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8"
           >
-            Creative Developer
+            FrontEnd Developer
           </motion.p>
 
           <motion.div
@@ -53,9 +65,18 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex mt-8 space-x-6"
           >
-            <FiGithub className="text-2xl text-gray-700 dark:text-gray-300 hover:text-rose-500 cursor-pointer" />
-            <FiLinkedin className="text-2xl text-gray-700 dark:text-gray-300 hover:text-rose-500 cursor-pointer" />
-            <FiTwitter className="text-2xl text-gray-700 dark:text-gray-300 hover:text-rose-500 cursor-pointer" />
+            <a href="https://github.com/nounthanith" target="_blank">
+              <FiGithub className="text-2xl text-gray-700 dark:text-gray-300 hover:text-rose-500 cursor-pointer" />
+            </a>
+            <a href="https://web.facebook.com/tha.nith.549" target="_blank">
+              <FiFacebook className="text-2xl text-gray-700 dark:text-gray-300 hover:text-rose-500 cursor-pointer" />
+            </a>
+            <a href="https://www.instagram.com/tonq_tong/" target="_blank">
+              <FiInstagram className="text-2xl text-gray-700 dark:text-gray-300 hover:text-rose-500 cursor-pointer" />
+            </a>
+            <a href="https://t.me/Nuon_Thanith" target="_blank">
+              <FiFileText className="text-2xl text-gray-700 dark:text-gray-300 hover:text-rose-500 cursor-pointer" />
+            </a>
           </motion.div>
         </div>
 
