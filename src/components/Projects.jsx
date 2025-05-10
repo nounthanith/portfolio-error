@@ -4,13 +4,53 @@ import { FiExternalLink, FiGithub } from 'react-icons/fi'
 
 const projects = [
   {
-    title: "Project 1",
-    description: "A modern web application with React and Node.js",
-    tags: ["React", "Tailwind", "Node"],
-    github: "#",
-    live: "#"
+    image: "/projects/GroupProject.png",
+    title: "Asigment Project",
+    description: "A assigment website using Html and Css only",
+    tags: ["Html", "Css",],
+    github: "https://github.com/nounthanith/group3",
+    live: "https://nounthanith.github.io/group3/"
   },
-  // Add more projects
+  {
+    image: "/projects/NewApi.png",
+    title: "News",
+    description: "A News website create with Html TailwindCss and JavaScript(Fecth News api)",
+    tags: ["Html", "Tailwind",],
+    github: "https://github.com/nounthanith/news",
+    live: "https://news-orpin-alpha.vercel.app/"
+  },
+  {
+    image: "/projects/DashBoard.png",
+    title: "Dash Board",
+    description: "A dashboard project I created by following a YouTube tutorial.",
+    tags: ["React", "Tailwind",],
+    github: "https://github.com/nounthanith/dashboard",
+    live: "https://dashboard-rho-wheat-10.vercel.app/"
+  },
+  {
+    image: "/projects/MusicApp.png",
+    title: "Music Website",
+    description: "A music website I created while learning Bootstrap and integrating APIs.",
+    tags: ["React", "BootStrap",],
+    github: "https://github.com/nounthanith/music",
+    live: "https://music-rose-nu.vercel.app/"
+  },
+  {
+    image: "/projects/Portfolio.png",
+    title: "My Portfolio",
+    description: "My Portfolio that I use.",
+    tags: ["React", "Tailwind",],
+    github: "https://github.com/nounthanith/portfolio",
+    live: "https://portfolio-tan-six-69.vercel.app/"
+  },
+  {
+    image: "/projects/ChatBot.png",
+    title: "Gimi Chat Bot",
+    description: "A chatbot project built with Google API and styled with Tailwind CSS.",
+    tags: ["React", "Tailwind",],
+    github: "https://github.com/nounthanith/gimini-ai",
+    live: "https://gimini-ai-ten.vercel.app/"
+  },
 ]
 
 export default function Projects() {
@@ -49,7 +89,7 @@ export default function Projects() {
               className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
               <div className="h-48 bg-gradient-to-r from-rose-400 to-purple-500 flex items-center justify-center">
-                <span className="text-white text-2xl font-bold">Project Image</span>
+                <img src={project.image} alt="" />
               </div>
               
               <div className="p-6">

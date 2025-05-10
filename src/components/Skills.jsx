@@ -6,8 +6,8 @@ const skills = [
   { name: 'JavaScript', level: 85, color: 'from-yellow-400 to-amber-500' },
   { name: 'Tailwind CSS', level: 95, color: 'from-teal-400 to-emerald-500' },
   { name: 'Node.js', level: 80, color: 'from-green-400 to-lime-500' },
-  { name: 'UI/UX Design', level: 75, color: 'from-fuchsia-400 to-purple-500' },
-  { name: 'Animation', level: 85, color: 'from-rose-400 to-pink-500' },
+  { name: 'MongoDB', level: 75, color: 'from-green-400 to-green-800' },
+  { name: 'Flutter', level: 75, color: 'from-blue-700 to-blue-500' },
 ]
 
 export default function Skills() {
