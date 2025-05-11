@@ -1,28 +1,58 @@
 // components/Contact.jsx
-import { motion } from 'framer-motion'
-import { useState } from 'react'
-import { FiSend } from 'react-icons/fi'
+import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { FiSend } from 'react-icons/fi';
+import { toast } from 'react-hot-toast';
+import emailjs from '@emailjs/browser';
+
+
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
-  })
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
-    const { name, value } = e.target
+    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }))
-  }
+    }));
+  };
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // Handle form submission
-    console.log(formData)
-  }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_email: 'nounthanith99@gmail.com'
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      );
+
+      toast.success('Message sent successfully!');
+      setFormData({
+        name: '',
+        email: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast.error('Failed to send message. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section id="contact" className="py-20 relative z-10">
@@ -116,13 +146,14 @@ export default function Contact() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               type="submit"
-              className="flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-rose-500 to-purple-500 text-white rounded-lg font-medium shadow-lg hover:shadow-xl transition-all"
+              disabled={isSubmitting}
+              className={`flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-rose-500 to-purple-500 text-white rounded-lg font-medium shadow-lg hover:shadow-xl transition-all ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
             >
-              Send Message <FiSend className="ml-2" />
+              {isSubmitting ? 'Sending...' : 'Send Message'} <FiSend className="ml-2" />
             </motion.button>
           </form>
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
