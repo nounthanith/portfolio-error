@@ -5,13 +5,10 @@ import {
   FiFileText,
   FiGithub,
   FiInstagram,
-  FiLinkedin,
-  FiPhone,
-  FiPhoneCall,
-  FiTwitter,
 } from "react-icons/fi";
 import { Link } from "react-scroll";
 import me from "./../assets/Me.jpg";
+import cv from "./../../public/Cv.pdf"
 
 export default function Hero() {
   return (
@@ -43,7 +40,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex space-x-4"
+            className="flex flex-wrap space-x-4"
           >
             <Link
               to="projects"
@@ -51,12 +48,14 @@ export default function Hero() {
             >
               View Work
             </Link>
-            <Link
-              to="contact"
-              className="px-8 py-3 border-2 border-rose-500 text-rose-500 dark:text-white rounded-full hover:bg-rose-500 hover:text-white transition-colors"
-            >
-              Contact Me
-            </Link>
+            
+            <a
+                href={cv}
+                download={cv}
+                className="px-8 py-3 border-2 border-rose-500 text-rose-500 dark:text-white rounded-full hover:bg-rose-500 hover:text-white transition-colors"
+              >
+                Download CV
+              </a>
           </motion.div>
 
           <motion.div
