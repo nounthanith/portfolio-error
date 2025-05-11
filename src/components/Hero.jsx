@@ -46,7 +46,7 @@ export default function Hero() {
               to="projects"
               className="px-8 py-3 bg-rose-500 text-white rounded-full hover:bg-rose-600 transition-colors"
             >
-              View Work
+              My Projects
             </Link>
             
             <a
