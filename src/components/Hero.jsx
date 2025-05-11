@@ -5,10 +5,14 @@ import {
   FiFileText,
   FiGithub,
   FiInstagram,
+  FiLinkedin,
+  FiPhone,
+  FiPhoneCall,
+  FiTwitter,
 } from "react-icons/fi";
 import { Link } from "react-scroll";
 import me from "./../assets/Me.jpg";
-import cv from "./../../public/Cv.pdf"
+import cv from './../../public/CV.pdf'
 
 export default function Hero() {
   return (
@@ -46,9 +50,8 @@ export default function Hero() {
               to="projects"
               className="px-8 py-3 bg-rose-500 text-white rounded-full hover:bg-rose-600 transition-colors"
             >
-              My Projects
+              View Work
             </Link>
-            
             <a
                 href={cv}
                 download={cv}
