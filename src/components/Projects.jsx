@@ -92,7 +92,7 @@ export default function Projects() {
                 <img src={project.image} alt="" />
               </div>
               
-              <div className="p-6">
+              <div className="p-6 mt-10">
                 <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">{project.title}</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
                 
