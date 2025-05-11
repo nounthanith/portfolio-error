@@ -64,12 +64,12 @@ export default function Header({ darkMode, setDarkMode }) {
               </Link>
             ))}
 
-            <button
+            {/* <button
               onClick={() => setDarkMode(!darkMode)}
               className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
             >
               {darkMode ? <FiSun /> : <FiMoon />}
-            </button>
+            </button> */}
           </nav>
 
           {/* Mobile Menu Button */}

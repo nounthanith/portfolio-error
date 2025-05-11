@@ -1,5 +1,6 @@
 // components/Skills.jsx
 import { motion } from 'framer-motion'
+import Waves from './Waves'
 
 const skills = [
   { name: 'React', level: 90, color: 'from-cyan-400 to-blue-500' },
@@ -8,6 +9,10 @@ const skills = [
   { name: 'Node.js', level: 80, color: 'from-green-400 to-lime-500' },
   { name: 'MongoDB', level: 75, color: 'from-green-400 to-green-800' },
   { name: 'Flutter', level: 75, color: 'from-blue-700 to-blue-500' },
+  { name: 'Dart', level: 85, color: 'from-blue-900 to-blue-200' },
+  { name: 'Html/Css', level: 95, color: 'from-red-900 to-red-200' },
+  { name: 'Java', level: 80, color: 'from-pink-300 to-pink-700' },
+  { name: 'C++', level: 80, color: 'from-purple-500 to-pink-100' },
 ]
 
 export default function Skills() {
@@ -62,6 +67,7 @@ export default function Skills() {
           ))}
         </div>
       </div>
+      <Waves />
     </section>
   )
 }

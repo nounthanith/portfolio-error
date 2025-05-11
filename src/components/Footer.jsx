@@ -1,12 +1,11 @@
 // components/Footer.jsx
 import { motion } from 'framer-motion'
-import { FiGithub, FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi'
+import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiFacebook } from 'react-icons/fi'
 
 const socialLinks = [
-  { icon: <FiGithub />, url: "https://github.com/yourusername" },
-  { icon: <FiLinkedin />, url: "https://linkedin.com/in/yourusername" },
-  { icon: <FiTwitter />, url: "https://twitter.com/yourusername" },
-  { icon: <FiMail />, url: "mailto:your.email@example.com" }
+  { icon: <FiGithub />, url: "https://github.com/nounthanith" },
+  { icon: <FiFacebook />, url: "https://web.facebook.com/tha.nith.549" },
+  { icon: <FiMail />, url: "mailto:nounthanith99@gmail.com" }
 ]
 
 export default function Footer() {
@@ -41,7 +40,7 @@ export default function Footer() {
           </div>
           
           <p className="text-gray-600 dark:text-gray-400 text-center max-w-md">
-            © {new Date().getFullYear()} Your Name. All rights reserved. 
+            © {new Date().getFullYear()} Nuon Thanith. All rights reserved. 
             Built with React and Tailwind CSS.
           </p>
         </motion.div>

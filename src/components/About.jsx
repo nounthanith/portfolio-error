@@ -82,7 +82,7 @@ export default function About() {
               </motion.div>
               <motion.div
                 whileHover={{ y: -5 }}
-                className="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full font-medium"
+                className="px-4 py-2 bg-yellow-200 dark:bg-yellow-500 text-orange-600 dark:text-black rounded-full font-medium"
               >
                 JavaScript
               </motion.div>
@@ -97,6 +97,48 @@ export default function About() {
                 className="px-4 py-2 bg-green-300 dark:bg-green-900 text-white dark:text-green-500 rounded-full font-medium"
               >
                 MongoDB
+              </motion.div>
+              <motion.div
+                whileHover={{ y: -5 }}
+                className="px-4 py-2 bg-green-500 dark:bg-green-900 text-green-900 dark:text-green-300 rounded-full font-medium"
+              >
+                NodeJS
+              </motion.div>
+              <motion.div
+                whileHover={{ y: -5 }}
+                className="px-4 py-2 bg-blue-200 dark:bg-blue-900 text-blue-900 dark:text-blue-300 rounded-full font-medium"
+              >
+                Flutter
+              </motion.div>
+              <motion.div
+                whileHover={{ y: -5 }}
+                className="px-4 py-2 bg-blue-500 dark:bg-blue-400 text-white dark:text-blue-900 rounded-full font-medium"
+              >
+                Dart
+              </motion.div>
+              <motion.div
+                whileHover={{ y: -5 }}
+                className="px-4 py-2 bg-red-500 dark:bg-red-700 text-white dark:text-white rounded-full font-medium"
+              >
+                Java
+              </motion.div>
+              <motion.div
+                whileHover={{ y: -5 }}
+                className="px-4 py-2 bg-orange-500 dark:bg-orange-700 text-orange-200 dark:text-orange-200 rounded-full font-medium"
+              >
+                C++
+              </motion.div>
+              <motion.div
+                whileHover={{ y: -5 }}
+                className="px-4 py-2 bg-orange-300 dark:bg-stone-500 text-black dark:text-white rounded-full font-medium"
+              >
+                Html/Css
+              </motion.div>
+              <motion.div
+                whileHover={{ y: -5 }}
+                className="px-4 py-2 bg-gray-400 dark:bg-gray-500 text-white dark:text-white rounded-full font-medium"
+              >
+                Git/Github
               </motion.div>
             </div>
           </motion.div>
