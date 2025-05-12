@@ -48,7 +48,7 @@ export default function Contact() {
       });
     } catch (error) {
       console.error('Error sending email:', error);
-      toast.error('Failed to send message. Please try again later.');
+      toast.error('Failed to send message. Please click on facebook icon for contact me😂🙏❤️.');
     } finally {
       setIsSubmitting(false);
     }

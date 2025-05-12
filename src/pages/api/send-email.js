@@ -17,7 +17,7 @@ const handleSubmit = async (e) => {
     toast.success("Message sent!");
     setFormData({ name: '', email: '', message: '' });
   } catch (error) {
-    toast.error("Failed to send. Please try again.");
+    toast.error("Failed to send. Please click on facebook icon for contact me😂🙏❤️.");
     console.error("EmailJS Error:", error);
   } finally {
     setIsSubmitting(false);

@@ -12,6 +12,7 @@ import Footer from './components/Footer'
 import CustomCursor from './components/CustomCursor'
 import ScrollProgress from './components/ScrollProgress'
 import { Toaster } from 'react-hot-toast';
+import ThemeToggle from './components/ThemeToggle'
 
 function App() {
   const [darkMode, setDarkMode] = useState(false)
@@ -40,7 +41,7 @@ function App() {
         <Particles />
         <CustomCursor />
         <ScrollProgress />
-        <Toaster />
+        <Toaster  position="bottom-right"/>
         <Header darkMode={darkMode} setDarkMode={setDarkMode} />
         <AnimatePresence>'
           <motion.div
