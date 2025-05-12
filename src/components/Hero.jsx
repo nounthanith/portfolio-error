@@ -13,6 +13,7 @@ import {
 import { Link } from "react-scroll";
 import me from "./../assets/Me.jpg";
 import cv from './../../public/CV.pdf'
+import GradientText from "./GradientText.jsx";
 
 export default function Hero() {
   return (
@@ -28,7 +29,7 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold text-gray-800 dark:text-white mb-4"
           >
-            Hi, I'm <span className="text-rose-500">Nuon Thanith</span>
+            Hi, I'm <GradientText text="Nuon Thanith" className="text-7xl font-bold" />
           </motion.h1>
 
           <motion.p

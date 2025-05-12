@@ -13,6 +13,8 @@ import CustomCursor from './components/CustomCursor'
 import ScrollProgress from './components/ScrollProgress'
 import { Toaster } from 'react-hot-toast';
 import ThemeToggle from './components/ThemeToggle'
+import GradientText from "./components/GradientText.jsx";
+import {CgHello} from "react-icons/cg";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false)
