@@ -41,7 +41,7 @@ function App() {
         <Particles />
         <CustomCursor />
         <ScrollProgress />
-        <Toaster  position="bottom-right"/>
+        <Toaster  position="top-right"/>
         <Header darkMode={darkMode} setDarkMode={setDarkMode} />
         <AnimatePresence>'
           <motion.div
