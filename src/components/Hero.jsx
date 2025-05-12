@@ -29,7 +29,7 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold text-gray-800 dark:text-white mb-4"
           >
-            Hi, I'm <GradientText text="Nuon Thanith" className="text-7xl font-bold" />
+            Hi, I'm <GradientText text="Nuon Thanith" className="text-5xl md:text-7xl font-bold" />
           </motion.h1>
 
           <motion.p
