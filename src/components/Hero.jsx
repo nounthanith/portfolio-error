@@ -90,7 +90,6 @@ export default function Hero() {
           className="md:w-1/2 flex justify-center"
         >
           <div className="relative w-64 h-64 md:w-80 md:h-80">
-            {/* Your image or animated SVG */}
             <div className="absolute inset-0 bg-rose-400 rounded-full opacity-20 blur-xl animate-pulse"></div>
             <div className="relative z-10 w-full h-full bg-gradient-to-br from-rose-400 to-purple-500 rounded-full flex items-center justify-center text-white text-4xl font-bold">
               <img

@@ -1,4 +1,3 @@
-// components/ScrollProgress.jsx
 import { motion, useScroll, useSpring } from 'framer-motion'
 import { useEffect, useState } from 'react'
 

@@ -12,14 +12,11 @@ import Footer from './components/Footer'
 import CustomCursor from './components/CustomCursor'
 import ScrollProgress from './components/ScrollProgress'
 import { Toaster } from 'react-hot-toast';
-import ThemeToggle from './components/ThemeToggle'
-import GradientText from "./components/GradientText.jsx";
-import {CgHello} from "react-icons/cg";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false)
 
-  // Apply dark mode to HTML element and initialize from localStorage
+  
   useEffect(() => {
     const savedMode = localStorage.getItem('darkMode');
     if (savedMode !== null) {

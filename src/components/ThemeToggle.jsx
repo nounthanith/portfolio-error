@@ -1,28 +1,7 @@
-// components/ThemeToggle.jsx
 import { motion } from 'framer-motion'
 import { FiMoon, FiSun } from 'react-icons/fi'
-import { useEffect } from 'react'
 
 export default function ThemeToggle({ darkMode, setDarkMode }) {
-  // Apply dark mode class to HTML document and set up transition
-  useEffect(() => {
-    const savedMode = localStorage.getItem('darkMode');
-    if (savedMode !== null) {
-      setDarkMode(savedMode === 'true');
-    }
-  }, [setDarkMode]);
-
-  useEffect(() => {
-    // Apply the dark mode class to the HTML element
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('darkMode', 'true');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('darkMode', 'false');
-    }
-  }, [darkMode]);
-
   return (
     <motion.button
       whileHover={{ scale: 1.1 }}
@@ -38,7 +17,7 @@ export default function ThemeToggle({ darkMode, setDarkMode }) {
         exit={{ rotate: 30, opacity: 0 }}
         transition={{ duration: 0.2 }}
       >
-        {darkMode ? <FiSun /> : <FiMoon />}
+        {darkMode ? <FiSun className='text-orange-300'/> : <FiMoon className='text-black font-bold'/>}
       </motion.div>
     </motion.button>
   )

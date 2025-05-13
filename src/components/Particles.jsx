@@ -1,4 +1,3 @@
-// components/Particles.jsx
 import { useEffect, useRef } from 'react'
 
 export default function Particles() {
@@ -9,11 +8,11 @@ export default function Particles() {
     const ctx = canvas.getContext('2d')
     let particles = []
     
-    // Set canvas size
+    
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
     
-    // Create particles
+    
     const colors = ['#f43f5e', '#8b5cf6', '#0ea5e9', '#10b981']
     
     class Particle {

@@ -1,4 +1,3 @@
-// components/About.jsx
 import { motion } from "framer-motion";
 
 const experiences = [

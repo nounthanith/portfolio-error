@@ -1,4 +1,3 @@
-// components/CustomCursor.jsx
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 

@@ -1,4 +1,3 @@
-// components/Contact.jsx
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { FiSend, FiMail, FiPhone, FiGithub, FiFacebook, FiLinkedin, FiInstagram } from 'react-icons/fi';

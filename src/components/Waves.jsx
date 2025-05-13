@@ -1,4 +1,3 @@
-// components/Waves.jsx
 import { useEffect, useRef } from 'react'
 
 export default function Waves() {
@@ -9,22 +8,22 @@ export default function Waves() {
     const ctx = canvas.getContext('2d')
     let time = 0
     
-    // Set canvas size
+    
     canvas.width = window.innerWidth
     canvas.height = 200
     
-    // Gradient colors
+    
     const gradients = [
-      { start: '#f43f5e', end: '#8b5cf6' },  // Rose to Purple
-      { start: '#0ea5e9', end: '#10b981' },  // Sky to Emerald
-      { start: '#f59e0b', end: '#ef4444' }   // Amber to Red
+      { start: '#f43f5e', end: '#8b5cf6' },  
+      { start: '#0ea5e9', end: '#10b981' },  
+      { start: '#f59e0b', end: '#ef4444' }
     ]
     
     function drawWave() {
       time += 0.005
       ctx.clearRect(0, 0, canvas.width, canvas.height)
       
-      // Draw multiple waves
+      
       for (let i = 0; i < 3; i++) {
         const gradient = ctx.createLinearGradient(0, 0, canvas.width, 0)
         gradient.addColorStop(0, gradients[i].start)
@@ -36,7 +35,7 @@ export default function Waves() {
         ctx.beginPath()
         ctx.moveTo(0, canvas.height)
         
-        // Draw wave
+        
         for (let x = 0; x < canvas.width; x++) {
           const y = Math.sin(x * 0.01 + time + i * 2) * 30 + 
                     Math.sin(x * 0.02 + time * 1.5 + i) * 20 + 
@@ -54,7 +53,7 @@ export default function Waves() {
     
     drawWave()
     
-    // Handle resize
+    
     const handleResize = () => {
       canvas.width = window.innerWidth
     }

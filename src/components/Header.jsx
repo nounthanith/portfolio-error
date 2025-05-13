@@ -1,8 +1,8 @@
-// components/Header.jsx
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { FiMoon, FiSun, FiMenu, FiX } from "react-icons/fi";
 import { Link } from "react-scroll";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header({ darkMode, setDarkMode }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,23 +63,15 @@ export default function Header({ darkMode, setDarkMode }) {
                 {item.name}
               </Link>
             ))}
+            
+            <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
 
-            {/* <button
-              onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
-            >
-              {darkMode ? <FiSun /> : <FiMoon />}
-            </button> */}
           </nav>
 
           {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center space-x-4">
-            {/* <button
-              onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
-            >
-              {darkMode ? <FiSun /> : <FiMoon />}
-            </button> */}
+            <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
+
 
             <button
               onClick={() => setIsOpen(!isOpen)}

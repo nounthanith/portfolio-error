@@ -1,4 +1,3 @@
-// components/Footer.jsx
 import { motion } from 'framer-motion'
 import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiFacebook } from 'react-icons/fi'
 
