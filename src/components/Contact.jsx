@@ -1,11 +1,9 @@
 // components/Contact.jsx
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { FiSend } from 'react-icons/fi';
+import { FiSend, FiMail, FiPhone, FiGithub, FiFacebook, FiLinkedin, FiInstagram } from 'react-icons/fi';
 import { toast } from 'react-hot-toast';
 import emailjs from '@emailjs/browser';
-
-
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -48,7 +46,7 @@ export default function Contact() {
       });
     } catch (error) {
       console.error('Error sending email:', error);
-      toast.error('Failed to send message. Please click on facebook icon for contact me😂🙏❤️.');
+      toast.error('Failed to send message. Please try my social media links below.');
     } finally {
       setIsSubmitting(false);
     }
@@ -76,7 +74,84 @@ export default function Contact() {
         >
           Have a project in mind or want to collaborate? Feel free to reach out!
         </motion.p>
+
+        {/* Contact Info and Social Media */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto mb-12"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Email */}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+              <div className="bg-rose-100 dark:bg-rose-900 p-3 rounded-full mb-4">
+                <FiMail className="text-rose-500 dark:text-rose-300 text-2xl" />
+              </div>
+              <h3 className="text-lg font-medium text-gray-800 dark:text-white mb-2">Email</h3>
+              <a 
+                href="mailto:nounthanith99@gmail.com" 
+                className="text-gray-600 dark:text-gray-300 hover:text-rose-500 transition-colors"
+              >
+                nounthanith99@gmail.com
+              </a>
+            </div>
+
+            {/* Phone */}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+              <div className="bg-rose-100 dark:bg-rose-900 p-3 rounded-full mb-4">
+                <FiPhone className="text-rose-500 dark:text-rose-300 text-2xl" />
+              </div>
+              <h3 className="text-lg font-medium text-gray-800 dark:text-white mb-2">Phone</h3>
+              <a 
+                href="tel:+855 93939290" 
+                className="text-gray-600 dark:text-gray-300 hover:text-rose-500 transition-colors"
+              >
+                093 939 290
+              </a>
+            </div>
+
+            {/* Social Media */}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+              <div className="bg-rose-100 dark:bg-rose-900 p-3 rounded-full mb-4">
+                <FiFacebook className="text-rose-500 dark:text-rose-300 text-2xl" />
+              </div>
+              <h3 className="text-lg font-medium text-gray-800 dark:text-white mb-4">Social Media</h3>
+              <div className="flex space-x-4">
+                <a 
+                  href="https://github.com/nounthanith" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-600 dark:text-gray-300 hover:text-rose-500 transition-colors"
+                  aria-label="GitHub"
+                >
+                  <FiGithub className="text-2xl" />
+                </a>
+                <a 
+                  href="https://web.facebook.com/tha.nith.549" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-600 dark:text-gray-300 hover:text-rose-500 transition-colors"
+                  aria-label="Facebook"
+                >
+                  <FiFacebook className="text-2xl" />
+                </a>
+                <a 
+                  href="https://www.instagram.com/tonq_tong/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-600 dark:text-gray-300 hover:text-rose-500 transition-colors"
+                  aria-label="Facebook"
+                >
+                  <FiInstagram className="text-2xl" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </motion.div>
         
+        {/* Contact Form */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}

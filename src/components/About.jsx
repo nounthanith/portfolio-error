@@ -5,26 +5,26 @@ const experiences = [
   {
     year: "2023 - Present",
     role: "Student",
-    company: "Nubb( Nation Univercity of Battambang. )",
-    description: "Information Techologyat at Nation Univercity of Battambang.",
+    company: "National University of Battambang",
+    description:"Studying Information Technology at the National University of Battambang.",
   },
   {
-    year: "2025 - Present",
+    year: "2025",
     role: "Student",
     company: "Sala IT",
-    description: "Learn Full-stack Appdeveloper",
+    description: "Learning Full-Stack App Development.",
   },
   {
     year: "2023 - 2024",
     role: "Student",
     company: "Master IT",
-    description: "Lern a full stack developer.",
+    description: "Learn to become a full-stack developer.",
   },
   {
-    year: "2020 - 2023",
+    year: "2023",
     role: "Student",
-    company: "Kdol Doun Teav",
-    description: "Diploma Certified at Kdol Doun Teav Height School.",
+    company: "Kdol Doun Teav High School",
+    description: "Obtained a Diploma from Kdol Doun Teav High School.",
   },
 ];
 

@@ -1,21 +1,30 @@
 // components/Skills.jsx
-import { motion } from 'framer-motion'
-import Waves from './Waves'
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import Waves from './Waves';
 
 const skills = [
-  { name: 'React', level: 90, color: 'from-cyan-400 to-blue-500' },
-  { name: 'JavaScript', level: 85, color: 'from-yellow-400 to-amber-500' },
-  { name: 'Tailwind CSS', level: 95, color: 'from-teal-400 to-emerald-500' },
-  { name: 'Node.js', level: 80, color: 'from-green-400 to-lime-500' },
-  { name: 'MongoDB', level: 75, color: 'from-green-400 to-green-800' },
-  { name: 'Flutter', level: 75, color: 'from-blue-700 to-blue-500' },
-  { name: 'Dart', level: 85, color: 'from-blue-900 to-blue-200' },
-  { name: 'Html/Css', level: 95, color: 'from-red-900 to-red-200' },
-  { name: 'Java', level: 80, color: 'from-pink-300 to-pink-700' },
-  { name: 'C++', level: 80, color: 'from-purple-500 to-pink-100' },
-]
+  { name: 'React', level: 90, color: 'from-cyan-400 to-blue-500', category: 'frontend' },
+  { name: 'JavaScript', level: 85, color: 'from-yellow-400 to-amber-500', category: 'frontend' },
+  { name: 'Tailwind CSS', level: 95, color: 'from-teal-400 to-emerald-500', category: 'frontend' },
+  { name: 'Node.js', level: 80, color: 'from-green-400 to-lime-500', category: 'backend' },
+  { name: 'MongoDB', level: 75, color: 'from-green-400 to-green-800', category: 'backend' },
+  { name: 'Flutter', level: 75, color: 'from-blue-700 to-blue-500', category: 'frontend' },
+  { name: 'Dart', level: 85, color: 'from-blue-900 to-blue-200', category: 'frontend' },
+  { name: 'HTML/CSS', level: 95, color: 'from-red-900 to-red-200', category: 'frontend' },
+  { name: 'Java', level: 80, color: 'from-pink-300 to-pink-700', category: 'backend' },
+  { name: 'C++', level: 80, color: 'from-purple-500 to-pink-100', category: 'backend' },
+];
+
+const categories = ['all', 'frontend', 'backend'];
 
 export default function Skills() {
+  const [activeCategory, setActiveCategory] = useState('all');
+
+  const filteredSkills = activeCategory === 'all' 
+    ? skills 
+    : skills.filter(skill => skill.category === activeCategory);
+
   return (
     <section id="skills" className="py-20 relative z-10">
       <div className="container mx-auto px-6">
@@ -38,9 +47,26 @@ export default function Skills() {
         >
           Technologies I've been working with recently
         </motion.p>
+
+        {/* Category Filter Buttons */}
+        <div className="flex justify-center gap-4 mb-12 flex-wrap">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveCategory(category)}
+              className={`px-4 py-2 rounded-full capitalize transition-colors ${
+                activeCategory === category
+                  ? 'bg-rose-500 text-white'
+                  : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600'
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {skills.map((skill, index) => (
+          {filteredSkills.map((skill, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
@@ -69,5 +95,5 @@ export default function Skills() {
       </div>
       <Waves />
     </section>
-  )
+  );
 }
