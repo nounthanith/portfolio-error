@@ -28,18 +28,19 @@ const experiences = [
 ];
 
 const skills = [
-  { name: "React.js", bgLight: "bg-rose-200", bgDark: "bg-rose-900", textLight: "text-rose-600", textDark: "text-rose-300" },
+  { name: "React.js", bgLight: "bg-sky-200", bgDark: "bg-sky-900", textLight: "text-sky-600", textDark: "text-sky-300" },
   { name: "JavaScript", bgLight: "bg-yellow-200", bgDark: "bg-yellow-500", textLight: "text-orange-600", textDark: "text-black" },
-  { name: "Tailwind CSS", bgLight: "bg-emerald-100", bgDark: "bg-emerald-900", textLight: "text-emerald-600", textDark: "text-emerald-300" },
-  { name: "MongoDB", bgLight: "bg-green-300", bgDark: "bg-green-900", textLight: "text-white", textDark: "text-green-500" },
   { name: "NodeJS", bgLight: "bg-green-500", bgDark: "bg-green-900", textLight: "text-green-900", textDark: "text-green-300" },
+  { name: "Tailwind CSS", bgLight: "bg-emerald-100", bgDark: "bg-emerald-900", textLight: "text-emerald-600", textDark: "text-emerald-300" },
+  { name: "MongoDB", bgLight: "bg-green-300", bgDark: "bg-green-900", textLight: "text-green-700", textDark: "text-green-500" },
   { name: "Flutter", bgLight: "bg-blue-200", bgDark: "bg-blue-900", textLight: "text-blue-900", textDark: "text-blue-300" },
   { name: "Dart", bgLight: "bg-blue-500", bgDark: "bg-blue-400", textLight: "text-white", textDark: "text-blue-900" },
-  { name: "Java", bgLight: "bg-red-500", bgDark: "bg-red-700", textLight: "text-white", textDark: "text-white" },
-  { name: "C++", bgLight: "bg-orange-500", bgDark: "bg-rose-700", textLight: "text-orange-200", textDark: "text-orange-200" },
-  { name: "Html/Css", bgLight: "bg-orange-300", bgDark: "bg-stone-500", textLight: "text-black", textDark: "text-white" },
+  { name: "Java", bgLight: "bg-red-300", bgDark: "bg-red-700", textLight: "text-white", textDark: "text-white" },
+  { name: "C++", bgLight: "bg-orange-300", bgDark: "bg-orange-600", textLight: "text-orange-900", textDark: "text-orange-100" },
+  { name: "Docker", bgLight: "bg-rose-200", bgDark: "bg-rose-500", textLight: "text-red-400", textDark: "text-red-700" },
   { name: "Git/Github", bgLight: "bg-gray-400", bgDark: "bg-gray-500", textLight: "text-white", textDark: "text-white" },
-  { name: "Docker", bgLight: "bg-pink-400", bgDark: "bg-white", textLight: "text-white", textDark: "text-white" }
+  { name: "Html/Css", bgLight: "bg-pink-300", bgDark: "bg-orange-700", textLight: "text-red-800", textDark: "text-white" },
+
 ];
 
 export default function About() {
@@ -87,12 +88,12 @@ export default function About() {
               new job opportunities.
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3">
               {skills.map((skill, index) => (
                 <motion.div
                   key={index}
                   whileHover={{ y: -5 }}
-                  className={`px-4 py-2 ${skill.bgLight} dark:${skill.bgDark} ${skill.textLight} dark:${skill.textDark} rounded-full font-medium`}
+                  className={`px-4 py-2 ${skill.bgLight} dark:${skill.bgDark} ${skill.textLight} dark:${skill.textDark} rounded-sm shadow-lg font-medium`}
                 >
                   {skill.name}
                 </motion.div>
