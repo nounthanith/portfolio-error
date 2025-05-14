@@ -62,7 +62,7 @@ const projects = [
     title: "Family Gallery",
     description: "My Family Image Website",
     tags: ["React", "Tailwind"],
-    category: "api",
+    category: "react",
     github: "https://github.com/nounthanith/my-family-gallery",
     live: "https://my-family-gallery.vercel.app/"
   },
