@@ -57,6 +57,15 @@ const projects = [
     github: "https://github.com/nounthanith/gimini-ai",
     live: "https://gimini-ai-ten.vercel.app/"
   },
+  {
+    image: "/projects/Family.png",
+    title: "Family Gallery",
+    description: "My Family Image Website",
+    tags: ["React", "Tailwind"],
+    category: "api",
+    github: "https://github.com/nounthanith/my-family-gallery",
+    live: "https://my-family-gallery.vercel.app/"
+  },
 ];
 
 const categories = ["all", "react", "api", "basic"];
