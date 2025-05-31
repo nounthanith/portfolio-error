@@ -66,6 +66,15 @@ const projects = [
     github: "https://github.com/nounthanith/my-family-gallery",
     live: "https://my-family-gallery.vercel.app/"
   },
+  {
+    image: "/projects/ModernPortfolio.png",
+    title: "Modern Portfolio",
+    description: "Modern UI",
+    tags: ["React", "Tailwind"],
+    category: "react",
+    github: "https://github.com/nounthanith/modern-portfolio",
+    live: "https://modern-portfolio-pi-two.vercel.app/"
+  },
 ];
 
 const categories = ["all", "react", "api", "basic"];
@@ -128,8 +137,8 @@ export default function Projects() {
               whileHover={{ y: -10 }}
               className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="h-48 bg-gradient-to-r from-rose-400 to-purple-500 flex items-center justify-center">
-                <img src={project.image} alt={project.title} className="h-full object-cover" />
+              <div className="h-48 bg-gradient-to-r flex items-center justify-center">
+                <img src={project.image} alt={project.title} className="h-full object-cover w-full" />
               </div>
               
               <div className="p-6">
