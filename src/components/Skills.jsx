@@ -11,9 +11,11 @@ const skills = [
   { name: 'MongoDB', level: 75, color: 'from-green-400 to-green-800', category: 'backend' },
   { name: 'Flutter', level: 75, color: 'from-blue-700 to-blue-500', category: 'frontend' },
   { name: 'Dart', level: 85, color: 'from-blue-900 to-blue-200', category: 'frontend' },
-  { name: 'HTML/CSS', level: 95, color: 'from-red-900 to-red-200', category: 'frontend' },
+  { name: 'HTML/CSS', level: 95, color: 'from-red-900 to-red-300', category: 'frontend' },
   { name: 'Java', level: 80, color: 'from-pink-300 to-pink-700', category: 'backend' },
-  { name: 'C++', level: 80, color: 'from-purple-500 to-pink-100', category: 'backend' },
+  { name: 'C++', level: 80, color: 'from-purple-500 to-pink-500', category: 'backend' },
+  { name: 'Laravel-12', level: 70, color: 'from-black to-red-700', category: 'backend' },
+  { name: 'PHP', level: 80, color: 'from-blue-400 to-sky-800', category: 'backend' },
 ];
 
 const categories = ['all', 'frontend', 'backend'];
