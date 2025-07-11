@@ -1,12 +1,51 @@
-# React + Vite
+# Free Portfolio
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Project Structure
 
-## Expanding the ESLint configuration
+You can colne or zip file
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+Directory structure:
+└── nounthanith-portfolio-nith/
+    ├── README.md
+    ├── eslint.config.js
+    ├── index.html
+    ├── LICENSE
+    ├── package.json
+    ├── SECURITY.md
+    ├── vite.config.js
+    ├── public/
+    │   └── projects/
+    └── src/
+        ├── App.css
+        ├── App.jsx
+        ├── index.css
+        ├── main.jsx
+        ├── assets/
+        ├── components/
+        │   ├── About.jsx
+        │   ├── Contact.jsx
+        │   ├── CustomCursor.jsx
+        │   ├── Footer.jsx
+        │   ├── GradientText.jsx
+        │   ├── Header.jsx
+        │   ├── Hero.jsx
+        │   ├── Particles.jsx
+        │   ├── Projects.jsx
+        │   ├── ScrollProgress.jsx
+        │   ├── Skills.jsx
+        │   ├── ThemeToggle.jsx
+        │   └── Waves.jsx
+        └── pages/
+            └── api/
+                └── send-email.js
+
+```
+
+# License
+
+MIT
